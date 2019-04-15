@@ -169,6 +169,7 @@ tasks.compileJava {
 	// See: https://docs.oracle.com/en/java/javase/11/tools/javac.html
 	options.compilerArgs.addAll(listOf(
 			"-Xlint", // Enables all recommended warnings.
+			"-Xlint:-deprecation", // Disables "use of deprecated items" warnings.
 			"-Werror" // Terminates compilation when warnings occur.
 	))
 	if (modularProjects.contains(project)) {
